@@ -16,11 +16,15 @@ public class TimeCalc {
 
 
 
-        if(newMinutes<10)
+        if(newHours<10 || newMinutes<10)
         {
+            if(newHours<10 && newMinutes<10)
+            System.out.println("0" + newHours + ":0" + newMinutes);
+            if(newHours<10 && newMinutes>10)
+            System.out.println("0" + newHours + ":" + newMinutes);
+            if(newHours>10 && newMinutes<10)
             System.out.println(newHours + ":0" + newMinutes);
         }
-
         else
         {
         System.out.println(newHours + ":" + newMinutes);

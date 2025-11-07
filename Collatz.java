@@ -9,9 +9,26 @@ public class Collatz {
 		int steps = 1;
 		String sh = "";
 
+
 		while(n2<=n)
 		{
 			sh = sh + n2;
+			if(n3 == 1)
+			{
+				if(n2%2 == 0)
+				{
+					n2 = n2/2;
+				}
+				else 
+				{
+					n2 = n2*3 + 1;
+				}
+
+				steps ++;
+			}
+
+			sh = sh + " " + n2;
+
 			while(n2 != 1)
 				{
 				if(n2%2 == 0)
@@ -37,7 +54,7 @@ public class Collatz {
 			steps = 1;
 	}
 
-	System.out.println(sh);
+		System.out.println("Every one of the first " + n + " hailstone sequences reached 1.");
 
 	}
 }
