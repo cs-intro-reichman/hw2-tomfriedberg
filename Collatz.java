@@ -25,9 +25,9 @@ public class Collatz {
 				}
 
 				steps ++;
+				sh = sh + " " + n2;
 			}
 
-			sh = sh + " " + n2;
 
 			while(n2 != 1)
 				{
